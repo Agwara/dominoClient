@@ -1,0 +1,110 @@
+.login-form {
+    &__container {
+        padding: 0 2rem;
+        max-width: 110rem;
+        margin: 1rem auto;
+
+        height: min-content;
+
+        display: flex;
+        justify-content: center;
+        
+        background-color: #fff;
+        border-radius: 2rem;
+
+        background-image: linear-gradient(90deg,transparent 50%,#f9f9f9 0);
+        background-size: 10px 10px;
+    }
+
+    &__content {
+        padding: 3rem;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        text-transform: uppercase;
+        font-size: 3rem;
+
+        color: $primary-colour;
+        text-align: center;
+
+        font-family: 'Bungee Outline', cursive;
+
+        @media only screen and (max-width: $bp-mobile) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__input {
+        height: 4rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        padding: 1rem;
+        outline: none;
+    }
+
+    &__btn {
+        height: 4rem;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-colour;
+        color: white;
+        border: none;
+        border-radius: 1rem;
+        padding-bottom: .5rem;
+        outline: none;
+        cursor: pointer;
+        transition: all .4s;
+
+        &:hover {
+            background-color:  #0a7cb1;
+        }
+    }
+
+    &__create-link {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    &__create-text--1 {
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    &__create-text--2 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    &__create-text--3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        align-self: center;
+        margin-right: .5rem;
+        color: $primary-colour;
+    }
+
+    &__create-font {
+        font-size: 2rem;
+        color: $primary-colour;
+    }
+
+    &__forgot-password {
+        margin-top: 1rem;
+        color: $primary-colour;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration-line: underline;
+        text-decoration-color: $primary-colour;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,172 @@
+.homepage {
+    padding: 0 2rem;
+
+    max-width: 110rem;
+    margin: 1rem auto;
+
+    display: grid;
+    //grid-template-rows: repeat(3, min-content);
+    grid-template-rows: repeat(3, min-content);
+    grid-row-gap: 2rem;
+
+}
+
+.start-order {
+    grid-row: 1/2;
+
+    @media only screen and (max-width: $bp-mobile) {
+        background-color: $primary-colour;
+        border-radius: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-mobile) {
+            flex-direction: column;
+        }
+
+        &::before,
+        &::after {
+            content: " ";
+            flex: auto;
+            height: 2px;
+            display: block;
+            background-color: #dcdcdc;
+        }
+    }
+
+    &__container {
+        @media only screen and (max-width: $bp-mobile) {
+            &::before,
+            &::after {
+                display: none;
+            } 
+        }
+    } 
+
+    &__heading {
+        display: flex;
+        justify-content: center;
+        flex: 20%;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        color: $primary-colour;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 0 1rem;
+
+        @media only screen and (max-width: $bp-mobile) {
+            color: white;
+        }
+    }
+
+    &__link-section {
+        flex: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1rem;
+
+    }
+
+    &__links {
+        font-family: One Dot Condensed Bold,Arial Narrow,Arial,Helvetica,sans-serif;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: .027em;
+        width: 15rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        background-color:#e31837;
+        padding: 1rem;
+        -webkit-font-smoothing: antialiased;
+        border-radius: .5rem;
+        transition: all .4s;
+
+        @media only screen and (max-width: $bp-smallest) {
+            max-width: 13rem;
+            padding: .5rem;
+        }
+
+        &:hover {
+            background-color: #7c0e1e;
+        }
+    }
+
+    &__or-text {
+        color: #888;
+        font-size: 2.3rem;
+        letter-spacing: .05rem;
+        font-weight: bold;
+        font-family: Two Dots Black Italic,Hoefler Text,Baskerville,Baskerville Old Face,Georgia,Times,Times New Roman,serif;;
+        padding: 0 1rem;
+
+        @media only screen and (max-width: $bp-mobile) {
+            color: white;
+        }
+    }
+}
+
+// THE GALLERY.
+.gallery {
+    grid-row: 2/3;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(11, 1fr);
+    grid-gap: 1.3rem;
+
+    @media only screen and (max-width: $bp-mobile) {
+        display: grid;
+        grid-template-rows: min-content min-content min-content;
+    }
+
+    &--item-1 {
+        grid-row: 1/-1;
+        grid-column: 1/9;
+
+        @media only screen and (max-width: $bp-mobile) {
+            grid-row: 1/2;
+            grid-column: 1/-1;
+        }
+    }
+
+
+    &--item-2 {
+        grid-row: 1/2;
+        grid-column: 9/12;
+
+        @media only screen and (max-width: $bp-mobile) {
+            grid-row: 2/3;
+            grid-column: 1/-1;
+        }
+    }
+
+    &--item-3 {
+        grid-row: 2/3;
+        grid-column: 9/12;
+
+        @media only screen and (max-width: $bp-mobile) {
+            grid-row: 3/4;
+            grid-column: 1/-1;
+        }
+    }
+
+    &--img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+
+        cursor: pointer;
+    }
+}
+
+
+

@@ -1,0 +1,176 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: $primary-colour;
+    z-index: 10;
+    height: 7.6rem;
+
+    box-shadow: 0 0 0.8125rem 0 rgba(0,0,0,.75);
+    animation: 1s ease-out 0s 1 slow-shadow;
+}
+
+.desktop-header {
+    &__container {
+        max-width: 110rem;
+        height: 100%;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav {
+        margin-left: 2rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+    }
+
+    &__nav-item {
+        display: flex;
+        align-items: center;
+        padding: .75rem .625rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        height: 100%;
+        transition: all .4s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fff
+        }
+        &:hover .desktop-header__nav-link {
+            color: $primary-colour;
+        }
+        &:hover .help-angle-down {
+            color: $primary-colour;
+        }
+    }
+
+    &__nav-link {
+        height: 100%;
+        padding-top: 1.8rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        align-self: center;
+
+        color: #fff;
+        //font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: inherit;
+    }
+
+    &__other-section {
+        margin-right: 2rem;
+
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    &__signin--container {
+        text-decoration: none;
+        background-color: #005177;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-width: 20rem;
+        font-size: 2rem;
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    &__signin--font {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    &__signin--text {
+        color: white;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    &__profile {
+        min-width: 15rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: all .4s;
+        cursor: pointer;
+
+
+        &:hover {
+            background-color: #fff;
+        }
+
+        &:hover .help-angle-down {
+            color: $primary-colour;
+        }
+
+        &:hover .desktop-header__profile--text {
+            color: $primary-colour;
+        }
+    }
+
+    &__profile--text {
+        color: #fff;
+        text-transform: uppercase;
+        //font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: inherit;
+    }
+}
+
+.cart-section {
+    position: relative;
+    margin-top: .5rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.cart-icon {
+    display: inline-block;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.cart-item-count {
+    position: absolute;
+    top: -15%;
+    right: -6%;
+    color: #fff;
+    background-color: red;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+}
+
+.cart-text {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+    //font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: inherit;
+}
+
+.help-angle-down {
+    color: #fff;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}

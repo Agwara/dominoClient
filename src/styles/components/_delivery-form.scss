@@ -1,0 +1,136 @@
+.delivery-form {
+    &__group {
+        width: inherit;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 2rem;
+
+        margin-bottom: 1rem;
+
+        @media only screen and (max-width: $bp-mobile) {
+            display: flex;
+            flex-direction: column;
+            grid-gap: 0rem;
+            margin-bottom: 2rem;
+
+            padding: 0 3rem;
+        }
+    }
+
+    &__label {
+        grid-column: 2/4;
+        justify-self: end;
+        display: flex;
+
+        align-items: center;
+    }
+
+    &__label-font {
+        color: #dd4b39;
+        font-size: .5rem;
+        margin-top: -.5rem;
+        margin-right: .2rem;
+    }
+
+    &__label-text {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #555;
+
+        @media only screen and (max-width: $bp-mobile) {
+            font-size: 2.5rem;
+        }
+
+    }
+
+    &__select {
+        grid-column: 4/7;
+        border: 1px solid #aaa;
+        outline: none;
+        font-size: 1.5rem;
+        padding: .5rem;
+        color: #333;
+
+        @media only screen and (max-width: $bp-mobile) {
+            font-size: 2.5rem;
+            height: 5rem;
+        }
+    }
+
+    &__input {
+        grid-column: 4/7;
+        border: 1px solid #aaa;
+        outline: none;
+        font-size: 1.5rem;
+        padding: .5rem;
+        color: #333;
+
+        @media only screen and (max-width: $bp-mobile) {
+            font-size: 2.5rem;
+            height: 5rem;
+        }
+    }
+    
+    &__instruction-container {
+        width: inherit;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 1rem;
+
+        @media only screen and (max-width: $bp-mobile) {
+            display: flex;
+            flex-direction: column;
+            grid-gap: 0rem;
+            margin-bottom: 2rem;
+
+            padding: 0 3rem;
+        }
+    }
+
+    &__instruction-container {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 1rem;
+
+        @media only screen and (max-width: $bp-mobile) {
+            display: flex;
+            grid-gap: 0rem;
+            margin-bottom: 2rem;
+
+            padding: 0 3rem;
+        }
+    }
+
+    &__instruction-main {
+        grid-column: 4/7;
+
+        display: flex;
+    }
+
+    &__instruction-exp--text {
+        grid-column: 4/7;
+        font-style: italic;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #333;
+        margin-right: .5rem;
+    }
+
+    &__instruction-exp--span {
+        margin-top: .2rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #333;
+
+    }
+
+    &__instruction--textarea {
+        height: 8rem;
+    }
+
+    &__btn {
+        margin-bottom: 2rem;
+    }
+}

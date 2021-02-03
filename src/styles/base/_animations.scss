@@ -1,0 +1,50 @@
+@keyframes movedown {
+    0% {
+        top: 80%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes moveright {
+    0% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+@keyframes openSideBar {
+    0% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(0vw);
+    }
+}
+
+
+@keyframes closeSideBar {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes displayAnimate {
+    0% {
+        display: none;
+    }
+
+    100% {
+        display: flex;
+    }
+}
