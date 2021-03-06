@@ -20,7 +20,7 @@ const SidebarNav = (props) => {
                     <p className="sidebar__nav--item-text">Deals</p>
                     <FontAwesomeIcon className="sidebar__nav--icon" icon="angle-right" />
                 </Link>
-                <Link onClick={toggle_sidebar_off} to="/" className="sidebar__nav--item sidebar__nav--item--3">
+                <Link onClick={toggle_sidebar_off} to="/menu" className="sidebar__nav--item sidebar__nav--item--3">
                     <p className="sidebar__nav--item-text">Menu</p>
                     <FontAwesomeIcon className="sidebar__nav--icon" icon="angle-right" />
                 </Link>

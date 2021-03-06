@@ -162,6 +162,7 @@
         text-transform: uppercase;
         border-radius: .4rem;
         transition: all .4s;
+        cursor: pointer;
 
         @media only screen and (max-width: $bp-mobile) {
             font-size: 2.5rem;
@@ -228,4 +229,21 @@
             font-weight: 600;
         }
     }
+}
+
+.disabled__btn {
+    grid-column: 4/7;
+    margin-left: 1rem;
+    width: max-content;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    padding: 1.5rem;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    border-radius: .4rem;
+    transition: all .4s;
+    background-color: #ff647b;
+    cursor: not-allowed;
 }

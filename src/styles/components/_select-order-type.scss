@@ -49,6 +49,8 @@
         transition: all .4s;
         cursor: pointer;
 
+        outline: none;
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -74,3 +76,68 @@
 
     }
 }
+
+.three-D__btn {
+    position: relative;
+
+    // background: -webkit-radial-gradient(#0078ae, #0078ae);
+    // background: -o-radial-gradient(#0078ae, #0078ae);
+    // background: -moz-radial-gradient(#0078ae, #0078ae);
+    // background: radial-gradient(#0078ae, #0078ae);
+
+    background: -webkit-radial-gradient(hsl(251, 100%, 50%), hsl(251, 100%, 40%));
+    background: -o-radial-gradient(hsl(251, 100%, 50%), hsl(251, 100%, 40%));
+    background: -moz-radial-gradient(hsl(251, 100%, 50%), hsl(251, 100%, 40%));
+    background: radial-gradient(hsl(251, 100%, 50%), hsl(251, 100%, 40%));
+
+    text-shadow: 0 -1px 0 #2B00EC;
+    border: solid 1px hsl(251, 100%, 20%);
+    z-index: 4;
+    transition: all .4s;
+
+    box-shadow: inset 0 1px 0 hsl(251, 100%, 50%),
+                0 2px 0 hsl(251, 100%, 20%),
+                0 3px 0 hsl(251, 100%, 18%),
+                0 4px 0 hsl(251, 100%, 16%),
+                0 5px 0 hsl(251, 100%, 14%),
+                0 6px 0 hsl(251, 100%, 12%),
+                0 7px 0 hsl(251, 100%, 10%),
+                0 8px 0 hsl(251, 100%, 8%),
+                0 9px 0 hsl(251, 100%, 6%);
+}
+
+.three-D__btn--hover {
+    background: -webkit-radial-gradient(hsl(251, 100%, 45%), hsl(251, 100%, 15%));
+    background: -o-radial-gradient(hsl(251, 100%, 45%), hsl(251, 100%, 15%));
+    background: -moz-radial-gradient(hsl(251, 100%, 45%), hsl(251, 100%, 15%));
+    background: radial-gradient(hsl(251, 100%, 45%), hsl(251, 100%, 15%));
+
+    top: 2px;
+
+    box-shadow: inset 0 1px 0 hsl(251, 100%, 50%),
+    0 2px 0 hsl(251, 100%, 20%),
+    0 3px 0 hsl(251, 100%, 18%),
+    0 4px 0 hsl(251, 100%, 16%),
+    0 5px 0 hsl(251, 100%, 14%);
+    // 0 6px 0 hsl(251, 100%, 12%),
+    // 0 7px 0 hsl(251, 100%, 10%);
+
+    transition: all linear .5s;
+} 
+
+/*.three-D__btn:active {
+    background: -webkit-radial-gradient(hsl(251, 100%, 45%), hsl(251, 100%, 35%));
+    background: -o-radial-gradient(hsl(251, 100%, 45%), hsl(251, 100%, 35%));
+    background: -moz-radial-gradient(hsl(251, 100%, 45%), hsl(251, 100%, 35%));
+    background: radial-gradient(hsl(251, 100%, 45%), hsl(251, 100%, 35%));
+
+    top: 2px;
+
+    box-shadow: inset 0 1px 0 hsl(251, 100%, 50%),
+    0 2px 0 hsl(251, 100%, 20%),
+    0 3px 0 hsl(251, 100%, 18%),
+    0 4px 0 hsl(251, 100%, 16%),
+    0 5px 0 hsl(251, 100%, 14%),
+    0 6px 0 hsl(251, 100%, 12%),
+    0 7px 0 hsl(251, 100%, 10%);
+}*/

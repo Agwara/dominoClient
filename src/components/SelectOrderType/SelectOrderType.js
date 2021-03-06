@@ -22,24 +22,32 @@ const SelectOrderType = (props) => {
                     <div className="select-order-type__header">Select Your Order Type</div>
     
                     <div className="select-order-type__control-group">
-                        <div onClick={onSetOptionToDelivery} className="select-order-type__control-group--1">
+                        <div 
+                            onClick={onSetOptionToDelivery} 
+                            className={props.orderType === "delivery" ? 
+                                        "select-order-type__control-group--1 three-D__btn--hover" 
+                                        : "select-order-type__control-group--1 three-D__btn"}>
                             <p className="select-order-type__control-group--text">Delivery</p>
                         </div>
                         <div className="select-order-type__control-group--or">
                             <p>- Or -</p>
                         </div>
     
-                        <div onClick={onSetOptionToCarryOut} className="select-order-type__control-group--2">
+                        <div 
+                            onClick={onSetOptionToCarryOut} 
+                            className={props.orderType === "carryout" ? 
+                                "select-order-type__control-group--2 three-D__btn--hover" 
+                                : "select-order-type__control-group--2 three-D__btn"}>
                             <p className="select-order-type__control-group--text">Carryout</p>
                         </div>
                     </div>
 
                     { props.orderType === "delivery" ? 
                         <div>
-                            <DeliveryFormDetails />
+                            <DeliveryFormDetails history={props.history} />
                         </div> :
                         <div>
-                            <CarryoutFormDetails />
+                            <CarryoutFormDetails history={props.history} />
                         </div>
                     }
                 </div>

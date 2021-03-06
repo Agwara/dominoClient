@@ -10,10 +10,10 @@ const PrivateRoute = ({
 	<Route {...rest} component={(props) => (
 			true ? (
 				<div>				
-					<Header />
+					<Header history={props.history} />
                     
                     <div className="content">
-                        <Component {...props} />
+                        <Component {...props}/>
 						<Footer />
                     </div>
 				</div>

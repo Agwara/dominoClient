@@ -3,16 +3,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { localGovernmentArea } from "../../data/localGovernmentArea";
 
+import { activeStates } from "../../data/activeStates";
+
 class DeliveryFormDetails extends React.Component {
     constructor (props) {
         super()
 
         this.state = {
-            place : "Lagos",
+            place : "Abia",
             governmentAreasList : [],
             governmentArea: "",
             deliveryAddress: "",
-            deliveryInstruction: ""
+            deliveryInstruction: "",
+            errorMessage: ""
         }
     }
 
@@ -36,30 +39,65 @@ class DeliveryFormDetails extends React.Component {
         await this.setState(() =>({ governmentAreasList }))
     }
 
-    onDeliveryAddressChange = (e) => {
+    onDeliveryAddressChange = async (e) => {
 		const address = e.target.value;
-        this.setState(() => ({ deliveryAddress: address }));
+        await this.setState(() => ({ deliveryAddress: address }));
+
+        if (address.length >= 5) {
+            await this.setState(() => ({errorMessage: ""}))
+        }
+    }
+
+    onCheckAddress = () => {
+        let address = this.state.deliveryAddress;
+
+        this.checkAddressLength(address)
     }
 
     onDeliveryInstructionChange = (e) => {
-		const instruction = e.target.value;
+        const instruction = e.target.value;
         this.setState(() => ({ deliveryInstruction: instruction }));
+    }
+
+
+    checkAddressLength = (address) => {
+        if (address.length < 5) {
+            this.setState(() => ({errorMessage: "The length of the address should not be less than 5 characters."}))
+        }
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault()
+
+        if (!(this.state.errorMessage)) {
+            this.props.history.push("/checkout")
+        }
+
     }
     
 
     render () {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
+                <div className="delivery-form__message">
+                    {
+                        this.state.errorMessage ? 
+                        <p>{this.state.errorMessage}</p> :
+                        ""
+                    }
+                </div>
+
                 <div className="delivery-form__group">
                     <label htmlFor="state" className="delivery-form__label">
                         <FontAwesomeIcon className="delivery-form__label-font" icon="star" />
                         <p className="delivery-form__label-text">State:</p>
                     </label>
                     <select className="delivery-form__select" onChange={this.onStateChange} value={this.state.place}>
-                        <option value="Ogun">Ogun</option>
-                        <option value="Abia">Abia</option>
-                        <option value="Abuja">Abuja</option>
-                        <option value="Lagos">Lagos</option>
+                        {
+                            activeStates.map((item, i) => (
+                                <option value={item} key={i}>{item}</option>
+                            ))
+                        }
                     </select>
                 </div>
 
@@ -94,22 +132,22 @@ class DeliveryFormDetails extends React.Component {
                         value={this.state.deliveryAddress}
                         onChange={this.onDeliveryAddressChange}
                         required
+                        onBlur={this.onCheckAddress}
                     ></textarea>
                 </div>
 
                 <div className="delivery-form__group">
                     <label htmlFor="delivery-instruct" className="delivery-form__label">
-                        <FontAwesomeIcon className="delivery-form__label-font" icon="star" />
+                        {/* <FontAwesomeIcon className="delivery-form__label-font" icon="star" /> */}
                         <p className="delivery-form__label-text">Delivery Instruction:</p>
                     </label>
                     <textarea 
                         id="delivery-instruct"
                         type="textarea"
-                        placeholder="Delivery Instruction"
+                        placeholder="Delivery Instruction (Optional)"
                         className="delivery-form__input delivery-form__instruction--textarea"
                         value={this.state.deliveryInstruction}
                         onChange={this.onDeliveryInstructionChange}
-                        required
                     ></textarea>
                 </div>
 
@@ -131,7 +169,12 @@ class DeliveryFormDetails extends React.Component {
                 </div>
 
                 <div className="customer-form__btn-container">
-                    <button className="customer-form__btn delivery-form__btn">Continue</button>
+                    <button 
+                        className={!(this.state.errorMessage) ? "customer-form__btn delivery-form__btn" :
+                        "disabled__btn delivery-form__btn"}
+                    >
+                        Continue
+                    </button>
                 </div>
             </form>
         )

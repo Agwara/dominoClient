@@ -7,10 +7,10 @@ const PublicRoute = ({ component: Component, ...rest }) => {
 	return (
 		<Route {...rest} component={(props) => (
 				<div>
-					<Header />
+					<Header history={props.history}/>
 					
                     <div className="content">
-                        <Component {...props} />
+                        <Component {...props}/>
 						<Footer />
                     </div>
 				</div>

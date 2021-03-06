@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const DesktopHeader = () => {
+const DesktopHeader = (props) => {
+
+	const goToCheckoutPage = () => {
+		props.history.push("/checkout")
+	}
 
 	return (
 		<header className="header desktop-header">
@@ -15,7 +19,7 @@ const DesktopHeader = () => {
 						<Link className="desktop-header__nav-link" to="select-order-type">Order Online</Link>
 					</li>
 					<li className="desktop-header__nav-item">
-						<Link className="desktop-header__nav-link" to="#">Menu</Link>
+						<Link className="desktop-header__nav-link" to="/menu">Menu</Link>
 					</li>
 					<li className="desktop-header__nav-item">
 						<Link className="desktop-header__nav-link" to="#">Deals</Link>
@@ -72,7 +76,7 @@ const DesktopHeader = () => {
 							</div>	
 						</div>
 					}
-					<div className="cart-section">
+					<div onClick={goToCheckoutPage} className="cart-section">
 						<div className="cart-sub">
 							<FontAwesomeIcon className="cart-icon" icon="shopping-cart" />
 							<div className="cart-item-count">

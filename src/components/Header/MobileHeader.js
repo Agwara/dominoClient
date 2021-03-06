@@ -15,6 +15,10 @@ const MobileHeader = (props) => {
 		props.close_sidebar()
 	}
 
+	const goToCheckoutPage = () => {
+		props.history.push("/checkout")
+	}
+
 	return (
 		<div className="header mobile-header">
 			<input 
@@ -42,7 +46,7 @@ const MobileHeader = (props) => {
 				<Link to="/" className="mobile-header__logo">LOGO</Link>
 			</div>
 
-			<div className="mobile-header__cart-section">
+			<div onClick={goToCheckoutPage} className="mobile-header__cart-section">
 				<div className="mobile-header__cart-sub">
 					<FontAwesomeIcon className="mobile-header__cart-icon" icon="shopping-cart" />
 					<div className="mobile-header__cart-item-count">

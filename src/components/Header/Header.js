@@ -3,7 +3,7 @@ import React from "react";
 import DesktopHeader from "./DesktopHeader";
 import MobileHeader from "./MobileHeader";
 
-const Header = () => {
+const Header = (props) => {
 	const [width, setWidth] = React.useState(window.innerWidth);
 	const breakpoint = 656;
   
@@ -15,7 +15,7 @@ const Header = () => {
 	  return () => window.removeEventListener("resize", handleWindowResize);
 	}, []);
   
-	return width < breakpoint ? <MobileHeader /> : <DesktopHeader />;
+	return width < breakpoint ? <MobileHeader history={props.history} /> : <DesktopHeader history={props.history} />;
   
 };
 
