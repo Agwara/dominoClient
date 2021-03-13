@@ -128,7 +128,7 @@ class CarryoutFormDetails extends React.Component {
         var date = curr.toISOString().substr(0,10);
 
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} className={(this.state.errorMessage) ? "form__error" : ""}>
                 <div className="delivery-form__message">
                     {
                         this.state.errorMessage ? 

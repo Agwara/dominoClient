@@ -1,9 +1,13 @@
-import React from "react";
+import React, {useLayoutEffect} from "react";
 import { connect } from "react-redux"
 import { Link } from "react-router-dom";
 import { set_order_type } from "../../actions/orderType";
 
 const HomePage = (props) => {
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    });
 
     const [width, setWidth] = React.useState(window.innerWidth);
 

@@ -21,11 +21,11 @@ const DesktopHeader = (props) => {
 					<li className="desktop-header__nav-item">
 						<Link className="desktop-header__nav-link" to="/menu">Menu</Link>
 					</li>
-					<li className="desktop-header__nav-item">
+					{/* <li className="desktop-header__nav-item">
 						<Link className="desktop-header__nav-link" to="#">Deals</Link>
-					</li>
+					</li> */}
 					<li className="desktop-header__nav-item">
-						<Link className="desktop-header__nav-link" to="#">Tracker</Link>
+						<Link className="desktop-header__nav-link" to="/tracker">Tracker</Link>
 					</li>
 					<li className="desktop-header__nav-item dropdown">
 						<div className="dropdown__hover">
@@ -33,8 +33,8 @@ const DesktopHeader = (props) => {
 							<FontAwesomeIcon className="help-angle-down" icon="angle-down" />
 						</div>
 						<div className="dropdown__menu">
-							<Link className="dropdown__link" to="#">Contact Us</Link>
-							<Link className="dropdown__link" to="#">FAQs</Link>
+							<Link to="/contact-us" className="dropdown__link">Contact Us</Link>
+							<Link to="/faq" className="dropdown__link">FAQs</Link>
 						</div>
 					</li>
 				</ul>

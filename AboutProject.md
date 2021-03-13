@@ -17,3 +17,6 @@ Some of the features/requirements of the fast Food delivery app include: -
 
 // Features to add
 * Make the delivery and carryout buttons 3d like the buttons styled in 30days of CSS.
+
+
+// When pushing to heroku use git push heroku main

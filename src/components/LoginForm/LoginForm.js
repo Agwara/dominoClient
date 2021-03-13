@@ -13,6 +13,10 @@ class LoginForm extends React.Component {
 		}
 	}
 	
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
+
 	onEmailChange = (e) => {
 		const email = e.target.value;
 		this.setState(() => ({ email }));

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useLayoutEffect} from "react";
 import { connect } from "react-redux";
 import { set_order_type } from "../../actions/orderType";
 
@@ -7,6 +7,10 @@ import DeliveryFormDetails from "../DeliveryFormDetails/DeliveryFormDetails";
 
 const SelectOrderType = (props) => {
 
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    });
+    
     const onSetOptionToDelivery = () => {
         props.set_order_type("delivery")
     }
@@ -33,11 +37,11 @@ const SelectOrderType = (props) => {
                             <p>- Or -</p>
                         </div>
     
-                        <div 
+                        <div
                             onClick={onSetOptionToCarryOut} 
                             className={props.orderType === "carryout" ? 
-                                "select-order-type__control-group--2 three-D__btn--hover" 
-                                : "select-order-type__control-group--2 three-D__btn"}>
+                                "select-order-type__control-group--1 three-D__btn--hover" 
+                                : "select-order-type__control-group--1 three-D__btn"}>
                             <p className="select-order-type__control-group--text">Carryout</p>
                         </div>
                     </div>

@@ -1,14 +1,15 @@
 import React, {useLayoutEffect} from "react";
 
-const CheckoutPage = () => {
+const ContactUSPage = () => {
     useLayoutEffect(() => {
         window.scrollTo(0, 0)
     });
+    
     return (
-        <div className="checkoutpage">
-            <h1>CheckoutPage Component</h1>
+        <div className="contact-us">
+            <h1>ContactUSPage Component</h1>
         </div>
     )
 }
 
-export default CheckoutPage;
+export default ContactUSPage;

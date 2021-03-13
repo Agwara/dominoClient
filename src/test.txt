@@ -1,0 +1,10 @@
+Firstly, thank you very much for giving me this opportunity to introduce myself.
+My name is Agwara Nnaemeka, I'm from Abia State, Nigeria. I'm currently pursuing
+a degree in Electrical and Electronic Engineering from the Federal University Of 
+Technology, Owerri.
+I stubmbled upon web programming in January 2019 and ever since then, I've fallen
+in love with it and I'm interested in expanding my career in Software Engineering 
+after my program in school. So far, I have worked with JavaScript, Python, HTML, CSS, 
+React.js, Node.js, Git/Github, Bootstrap, JSON, API.
+Besides my work and academic, I am extremely passionate about playing Chess, which is a great 
+mental torture for me.

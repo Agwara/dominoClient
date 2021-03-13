@@ -17,6 +17,10 @@ class CreateCustomerForm extends React.Component {
         }
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     onFirstNameChange = (e) => {
 		const name = e.target.value;
 		this.setState(() => ({ firstName: name }));

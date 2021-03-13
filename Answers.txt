@@ -1,0 +1,10 @@
+1 Primarily, I will create multiple instances of my server and setup an Apache server as load
+  balancer between them to reduce the load on a single server significantly. This will handle the use case well bacause
+  Apache server was designed to handle concurrent request using multithreading unlike a single
+  threaded server.
+
+2. I will consider using third party authentication or identity management sytems like AuthO/firebase.
+   In which case I'll have to use their SDK on the front-end, authenticate users and extract the unique
+   token returned from the third party service for storage on my server
+
+3. Session storage is used for only one session, that is data is deleted when the tab or browser closes
